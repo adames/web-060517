@@ -7,10 +7,22 @@
 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
+    <script src="app.js"></script>
+    <script src="js/lib/jquery-2.1.1.min.js"></script>
+    <script src="templates/template.js"></script>
+    <script src="controllers/teamPlayersController.js"></script>
+    <script src="controllers/playersController.js"></script>
+    <script src="controllers/teamsController.js"></script>
+    <script src="models/team.js"></script>
+    <script src="models/player.js"></script>
     <script src="./index.js" charset="utf-8"></script>
+
+
+    </script>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,6 +32,55 @@
     <![endif]-->
   </head>
   <body>
+    <h1>Team List</h1>
+    <div class="team">
+
+      <form class="new_team" action="index.html" method="post">
+        <div class="form-group">
+          <label for="">Name</label>
+          <input type="text" name="new_team_name">
+        </div>
+        <div class="form-group">
+          <label for="">City</label>
+          <input type="text" name="new_team_city" value="">
+        </div>
+        <div class="form-group">
+          <input class="btn btn-default" type="submit" ></button>
+        </div>
+      </form>
+
+
+      <ul class="team_list">
+
+      </ul>
+    </div>
+    <div class="player">
+      <h1>Player List</h1>
+      <form class="new_player" action="index.html" method="post">
+        <div class="form-group">
+          <label for="">Name</label>
+          <input type="text" name="new_player_name">
+        </div>
+        <div class="form-group">
+          <label for="">Hometown</label>
+          <input type="text" name="new_player_hometown" value="">
+        </div>
+        <div class="form-group">
+          <label for="">Points</label>
+          <input type="text" name="new_player_points" value="">
+        </div>
+        <div class="form-group">
+          <label for="">Year Of Birth</label>
+          <input type="text" name="new_player_yob" value="">
+        </div>
+        <input type="submit" class="btn btn-default" value="Add New Player">
+      </form>
+
+      <ul class="player_list">
+        //put players in here
+      </ul>
+    </div>
+
     <div class="container">
       <div class="row" >
          <div class="col">
@@ -27,17 +88,10 @@
   <thead>
     <tr>
       <th>Teams</th>
-      <th>Name</th>
-      <th>City</th>
+      <th>Player</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
+  <tbody class="team_player_list">
 
   </tbody>
 </table>
