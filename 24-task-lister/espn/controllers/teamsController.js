@@ -13,8 +13,7 @@ function wasClicked(){
   let selectedTeamId = 0
   $('body').on('click', function(event){
     if(event.target.parentElement.className === "team_list"){
-      //find target  
-      debugger;
+      //find target
       event.target.style.color = 'blue'
       selectedTeamId = event.target.id
     }

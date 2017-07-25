@@ -10,6 +10,7 @@
     <script src="app.js"></script>
     <script src="js/lib/jquery-2.1.1.min.js"></script>
     <script src="templates/template.js"></script>
+    <script src="controllers/homepageController.js"></script>
     <script src="controllers/teamPlayersController.js"></script>
     <script src="controllers/playersController.js"></script>
     <script src="controllers/teamsController.js"></script>
@@ -21,7 +22,7 @@
     </script>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -35,28 +36,36 @@
 
   <img src="http://vignette1.wikia.nocookie.net/logopedia/images/f/fc/SportsCenter_alternate_logo_2014.svg/revision/latest?cb=20170207021715" alt="SC" width="150" height="100">
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-3">
+    <div class="homepage">
+      <div class="btn-group">
+          <button class="btn" id="see_roster"><h1>See Roster</h1></button>
+          <button class="btn" id="assign_players"><h1>Assign Players</h1></button>
+        </div>
+      </div>
+      </div>
+  </div>
 
-
-  <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <h1>Team List</h1>
-      <div class="team">
 
+      <div class="team">
+        <h1>Team List</h1>
         <form class="new_team" action="index.html" method="post">
           <div class="form-group">
-            <label for="">Name</label>
-            <input type="text" name="new_team_name" id="new_team_name">
-          </div>
-          <div class="form-group">
-            <label for="">City</label>
-            <input type="text" name="new_team_city" id="new_team_city">
+            <label for="">Name</label><br>
+            <input type="text" name="new_team_name" id="new_team_name"><br>
+
+            <label for="">City</label><br>
+            <input type="text" name="new_team_city" id="new_team_city"><br>
           </div>
           <div class="form-group">
             <input class="btn btn-default" type="submit" value="Add New Team">
           </div>
         </form>
-        <ul class="team_list">
+        <ul class="team_list" >
         </ul>
       </div>
     </div>
@@ -66,20 +75,20 @@
         <h1>Player List</h1>
         <form class="new_player" action="index.html" method="post">
           <div class="form-group">
-            <label for="">Name</label>
-            <input type="text" name="new_player_name" id="new_player_name">
+            <label for="">Name</label><br>
+            <input type="text" name="new_player_name" id="new_player_name"><br>
           </div>
           <div class="form-group">
-            <label for="">Hometown</label>
-            <input type="text" name="new_player_hometown" value="" id="new_player_hometown">
+            <label for="">Hometown</label><br>
+            <input type="text" name="new_player_hometown" value="" id="new_player_hometown"><br>
           </div>
           <div class="form-group">
-            <label for="">Points</label>
-            <input type="text" name="new_player_points" value="" id="new_player_points">
+            <label for="">Points</label><br>
+            <input type="text" name="new_player_points" value="" id="new_player_points"><br>
           </div>
           <div class="form-group">
-            <label for="">Year Of Birth</label>
-            <input type="text" name="new_player_yob" value="" id="new_player_yob">
+            <label for="">Year Of Birth</label><br>
+            <input type="text" name="new_player_yob" value="" id="new_player_yob"><br>
           </div>
           <input type="submit" class="btn btn-default" value="Add New Player">
         </form>
