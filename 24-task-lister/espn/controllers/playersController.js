@@ -8,10 +8,10 @@ function displayPlayers(){
 }
 function addPlayer(){
   $('.new_player').submit(function(event){
-    let playerName = event.target.children.new_player_name.value
-    let playerHometown = event.target.children.new_player_hometown.value
-    let playerPoints = event.target.children.new_player_points.value
-    let playerYob = event.target.children.new_player_yob.value
+    let playerName = $('#new_player_name').val()
+    let playerHometown = $('#new_player_hometown').val()
+    let playerPoints = $('#new_player_points').val()
+    let playerYob = $('#new_player_yob').val()
     new Player(playerName, playerHometown, playerPoints, playerYob)
     event.preventDefault()
     displayPlayers()
